@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+body {
+  background-color: $lightrose;
+  text-align: center;
+  ul {
+    padding-left: 0;
+    list-style: none;
+    color: $lightrose;
+  }
+}
+
+.cocktail-cards {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cocktail-card {
+ display: inline-block;
+ width: 400px;
+  height: 240px;
+  background-color: $brightblue;
+  padding-top: 120px;
+  margin: 8px;
+  border-radius: 8px;
+  color: $lightrose;
+}

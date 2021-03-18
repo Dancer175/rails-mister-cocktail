@@ -1,13 +1,15 @@
-<h2>Create a new Cocktail</h2>
-<div id="create-form">
-  <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<div class="create-container">
+  <h2>Create a new Cocktail</h2>
+  <div id="create-form">
+    <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+  <% end %>
 </div>
-<br>
-<br>
 <div class="button">
   <%= link_to "back to HOME", root_path %>
 </div>
+</div>
+
+
 
