@@ -1,0 +1,15 @@
+.show-image {
+  margin: 20px;
+}
+.dose {
+  font-size: 24px;
+  color: black;
+}
+
+i {
+  font-size: 20px;
+  &:hover {
+    color: $blue;
+    text-decoration: none;
+  }
+}

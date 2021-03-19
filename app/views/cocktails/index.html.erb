@@ -4,11 +4,15 @@
     <%= link_to "Create Cocktail", new_cocktail_path, class: 'banner-btn' %>
   </div>
 </div>
-<%= image_tag ("Drink.jpg"), alt: "Empty Glasses", width: '100%', class: "banner-image" %>
+<%= image_tag ("Drink.jpg"), alt: "Drink", width: '100%', class: "banner-image" %>
 <div class="cocktail-cards">
   <ul>
     <% @cocktails.each do |cocktail| %>
-      <div class="cocktail-card">
+      <% if cocktail.photo.attached? %>
+        <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 240, crop: :fill %>')">
+      <% else %>
+        <div class="cocktail-card">
+      <% end %>
         <%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: "cocktails-title" %>
         <%= link_to cocktail_path(cocktail), method: :delete,
         data: { confirm: "Are you sure?"}, class: "cocktail-delete" do %>
@@ -18,4 +22,3 @@
     <% end %>
   </ul>
 </div>
-

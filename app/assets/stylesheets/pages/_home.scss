@@ -28,6 +28,9 @@ body {
   border-radius: 4px;
   color: $lightrose;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .cocktails-title {
@@ -41,12 +44,12 @@ body {
 }
 
 .cocktail-delete {
-  color: $rose;
+  color: $lightrose;
   position: absolute;
   top: 5px;
   right: 5px;
   font-size: 24px;
-  &:hover {
-    color: $blue;
+  i:hover {
+    color: $rose;
   }
 }
